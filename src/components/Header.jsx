@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import HamburgerMenu from './hamburgerMenu';
+import HamburgerMenu from './HamburgerMenu';
 import Kanavulablogo1 from '../assets/Kanavu Labs Logo.png';
 
 function Header() {
