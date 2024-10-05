@@ -1,0 +1,80 @@
+.scroll-text, .scroll-text-top {
+    position: fixed;
+    bottom: 50px; /* Position from the bottom */
+    right: 0; /* Align to the right */
+    display: inline-block; /* Allows rotation to work properly */
+    transform-origin: bottom left; /* Set the pivot point for rotation */
+    font-size: 1rem; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevents text wrapping */
+    transform: rotate(-90deg); /* Rotate the text */
+    cursor: pointer; /* Change cursor on hover */
+    
+    /* Set up the gradient background */
+    background: linear-gradient(90deg, #bdbab9, #eeeeee, #62605f);
+    background-size: 200% 200%; /* Increase size to allow movement */
+    animation: gradientAnimation 5s ease infinite; /* Apply the gradient animation */
+    
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make the text color transparent to show gradient */
+    z-index: 99;
+}
+.scroll-text-top{
+    bottom: 10px;
+}
+
+.scroll-down, .scroll-top {
+    position: fixed;
+    bottom: 20px; /* Align to the bottom */
+    right: 60px; /* Position from the right */
+    z-index: 99;
+}
+.scroll-top{
+    transform: rotate(180deg);
+    right: 70px;
+    bottom: 90px;
+}
+
+.scroll-down span, .scroll-top span {
+    display: block; /* Each dot will be a block */
+    width: 10px; /* Width of the dots */
+    height: 10px; /* Height of the dots */
+    border-bottom: 1px solid #fff; /* Create the dot */
+    border-right: 1px solid #fff; /* Create the dot */
+    transform: rotate(45deg); /* Rotate to make it look like a diagonal arrow */
+    margin: -10px; /* Adjust margin to center dots */
+    animation: animate 2s infinite; /* Apply animation */
+}
+
+.scroll-down span:nth-child(2), .scroll-top span:nth-child(2) {
+    animation-delay: -0.2s; /* Delay for the second dot */
+}
+
+.scroll-down span:nth-child(3), .scroll-top span:nth-child(3) {
+    animation-delay: -0.4s; /* Delay for the third dot */
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px); /* Start position */
+    }
+    50% {
+        opacity: 1; /* Fully visible at halfway */
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px); /* End position */
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position */
+    }
+}

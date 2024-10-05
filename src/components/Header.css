@@ -1,0 +1,24 @@
+/* .header {
+    background-color: black; /* Header background color */
+    /* color: white; /* Text color */
+    /*  padding: 10px 20px; /* Padding for header */
+    /* transition: all 0.3s ease; Smooth transition for fixed position */
+  /* }* */
+  
+  .header.fixed {
+    position: fixed; /* Fixed position when scrolled */
+    top: 0; /* Position at the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for effect */
+  }
+  
+  /* .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust max-width as needed */
+    /* margin: 0 auto; Center the container */
+  /* } */ 
+  
