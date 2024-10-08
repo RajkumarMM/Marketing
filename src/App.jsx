@@ -1,23 +1,22 @@
 import React from "react";
-import Scroll from "./components/Scroll";
-import WhatWeDo from "./components/WhatWeDo";
-import Hero from "./components/Hero";
-import WeDoDifferent from "./components/WeDoDifferent";
-import SkyRocket from "./components/SkyRocket";
-import HelpClient from "./components/HelpClient";
-import Footer from "./components/Footer";
+import Home from "./Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import AboutUs from "./AboutUs";
+import Footer from './components/Footer'
+
 
 function App() {
   return (
-    <>
-      <Hero />
-      <Scroll />
-      <WhatWeDo />
-      <WeDoDifferent />
-      <SkyRocket />
-      <HelpClient  />
-      <Footer />
-    </>
+    <Router>
+      <Header />
+    <Routes>
+      {/* Define the route for Home page */}
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<AboutUs />} />
+    </Routes>
+    <Footer />
+  </Router>
   );
 }
 
