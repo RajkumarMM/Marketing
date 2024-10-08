@@ -50,7 +50,7 @@ function HamburgerMenu() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/ReachUs" className='fs-4 fw-semibold' activeClassName="active" onClick={handleLinkClick}>
+              <NavLink to="/contact-us" className='fs-4 fw-semibold' activeClassName="active" onClick={handleLinkClick}>
                 Reach Us
               </NavLink>
             </li>

@@ -51,7 +51,7 @@ function Footer() {
                 <NavLink to="/careers" className="text-white" activeClassName="active">Careers</NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className="text-white" activeClassName="active">Reach Us</NavLink>
+                <NavLink to="/contact-us" className="text-white" activeClassName="active">Reach Us</NavLink>
               </li>
             </ul>
           </div>

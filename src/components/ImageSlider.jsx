@@ -14,7 +14,6 @@ import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/module
 import GravityImage1 from '../assets/image-slider-images/GravBrand1.png';
 import GravityImage2 from '../assets/image-slider-images/GravBrand2.png';
 import GravityImage3 from '../assets/image-slider-images/GravBrand3.png';
-import GravityImage4 from '../assets/image-slider-images/GravBrand4.png';
 import GravityImage5 from '../assets/image-slider-images/GravBrand5.png';
 
 function ImageSlider() {
@@ -48,16 +47,16 @@ function ImageSlider() {
         <img src={GravityImage3} alt="gravityBrandingImage" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={GravityImage2} alt="gravityBrandingImage" />
+          <img src={GravityImage1} alt="gravityBrandingImage" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img src={GravityImage2} alt="gravityBrandingImage" />
         </SwiperSlide>
         <SwiperSlide>
         <img src={GravityImage5} alt="gravityBrandingImage" />
         </SwiperSlide>
         <SwiperSlide>
-        <img src={GravityImage4} alt="gravityBrandingImage" />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src={GravityImage1} alt="gravityBrandingImage" />
+        <img src={GravityImage3} alt="gravityBrandingImage" />
         </SwiperSlide>
         <div className="slide-text mt-1">
             <h5>Gravity Screens</h5>
