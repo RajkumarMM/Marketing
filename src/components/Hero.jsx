@@ -31,7 +31,7 @@ function Hero() {
         </div>
 
         {/* SocialMedia content at the bottom */}
-        <div className="">
+        <div>
           <SocialMedia />
         </div>
       </div>

@@ -1,11 +1,49 @@
 import React from 'react'
 import AbImage from '../src/assets/aboutUsImage.png';
-import ScrollToTop from './components/ScrollToTop';
+import SocialMedia from './components/SocialMedia';
+import bannerImage from './assets/aboutBanner.png';
+import Scroll from './components/Scroll';
 
 
 function AboutUs() {
   return (
-    <div class="text-light mt-2">
+    <>
+    {/* banner section */}
+    <div className="vh-100 vw-100 bg-black text-white">
+      {/* Background image with opacity */}
+      <div className="position-absolute top-0 start-0 w-100 h-100">
+        <img
+          src={bannerImage}
+          alt="Office Background"
+          className="w-100 h-100 object-cover opacity-50"
+          style={{filter: 'grayscale(150%)'}}
+        />
+      </div>
+
+      {/* Content container */}
+      <div className="container h-100 d-flex flex-column justify-content-evenly position-relative z-0">
+        
+        {/* Headings in the middle */}
+        <div className="d-flex align-items-center justify-content-center mt-2">
+          <div className="text-center">
+            <h1 className="display-4 fw-bold">
+            Putting <span style={{ color: "#fa880c" }}>Technology</span> to <br />
+              <span style={{ color: "#fa880c" }}>Work for You.</span>
+            </h1>
+            <p className="fw-semibold">
+            Committed to delivering exceptional results by providing innovative <br /> solutions that meet the unique needs of our clients.
+            </p>
+          </div>
+        </div>
+
+        {/* SocialMedia content at the bottom */}
+        <div>
+          <SocialMedia />
+        </div>
+      </div>
+    </div>
+    {/* second section */}
+    <div class="text-light">
     <div className='container-fluid'>
     <div class="row">
   <div class="col-md-6 position-relative">
@@ -30,8 +68,9 @@ function AboutUs() {
   </div>
 </div>
 </div>
-<ScrollToTop />
+<Scroll />
 </div>
+</>
   )
 }
 
