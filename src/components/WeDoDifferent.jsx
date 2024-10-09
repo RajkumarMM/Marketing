@@ -1,5 +1,6 @@
 import React from 'react';
 import laptopImage from '../assets/laptop.png';
+import { NavLink } from 'react-router-dom';
 
 function WeDoDifferent() {
   return (
@@ -21,7 +22,7 @@ function WeDoDifferent() {
       <span style={{ color: "#fa880c" }}>custom software solutions</span> that drive growth.
     </p>
     <p class="mb-3">Ready to <span style={{ color: "#fa880c" }}>take your business to the next level?</span></p>
-    <button class="btn btn-outline-light w-50" onClick={() => window.location.href = 'tel:+1234567890'} >Let's talk</button>
+    <NavLink to="/contact-us"><button class="btn btn-outline-light w-50">Let's talk</button></NavLink>
   </div>
 </div>
 </div>

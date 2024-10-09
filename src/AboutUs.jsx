@@ -1,6 +1,7 @@
 import React from 'react'
 import AbImage from '../src/assets/aboutUsImage.png';
-import Scroll from './components/Scroll';
+import ScrollToTop from './components/ScrollToTop';
+
 
 function AboutUs() {
   return (
@@ -29,7 +30,7 @@ function AboutUs() {
   </div>
 </div>
 </div>
-<Scroll />
+<ScrollToTop />
 </div>
   )
 }

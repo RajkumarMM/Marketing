@@ -7,6 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import KanavulabIcon2 from '../assets/Kanavu Labs Logo.png';
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="text-light py-2" style={{ backgroundColor: '#fa880c' }}>
       <div className="container text-center">
@@ -65,7 +66,7 @@ function Footer() {
             <p>
               <NavLink to="/sitemap" className="text-white" activeClassName="active">Site Map</NavLink>
             </p>
-            <p>Terms & Conditions</p>
+            <p><NavLink to="/terms-and-conditions" className="text-white" activeClassName="active">Terms & Conditions</NavLink></p>
           </div>
           <div className="col-12 col-md-4">
             <h5 className="fw-semibold">WE'RE HIRING</h5>
@@ -75,7 +76,7 @@ function Footer() {
           </div>
         </div>
         <div className="small">
-          <p>Copyright ©2024 All Rights Reserved By Kanavu Labs</p>
+          <p>Copyright ©{currentYear} All Rights Reserved By Kanavu Labs</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Scroll from './components/Scroll';
+import ScrollToTop from './components/ScrollToTop';
+
 
 function ContactUs() {
   const [query, setQuery] = useState('');
@@ -25,8 +26,8 @@ function ContactUs() {
         <div className="col-md-5 my-4 p-4 rounded" style={{ border: "1px solid #fa880c", backgroundColor: '#1a1a1a' }}>
           <h3 style={{ color: "#fa880c" }}>Chat with Us</h3>
           <p className='fs-5 fw-semibold'>We are available to chat with you anytime. Click below to start a conversation with our support team.</p>
-          <a href="mailto:example@example.com" className="btn btn-outline-light" target="_blank" rel="noopener noreferrer">
-            Start Chat
+          <a href="mailto:support@kanavulabs.com?cc=magudeeswarn.chandrasekaran@kanavulabs.com&amp;subject=KanavuLabs%20Website%20Enquiry" className="btn btn-outline-light" target="_blank">
+            Mail Us
           </a>
         </div>
 
@@ -35,7 +36,7 @@ function ContactUs() {
           <h3 style={{ color: "#fa880c" }}>Call Us</h3>
           <span className='fs-5 fw-semibold me-2'>Reach us directly at:</span> 
           <p className='mt-2' style={{ color: "#fa880c" }}>Available from 9:00 AM to 6:00 PM, Monday to Friday.</p>
-          <a href="tel:+919876543210" className='btn btn-outline-light'> Call Us</a>
+          <a href="tel:+919629824568" className='btn btn-outline-light'> Call Us</a>
         </div>
       </div>
 
@@ -105,7 +106,7 @@ function ContactUs() {
         )}
       </div>
     </div>
-    <Scroll />
+    <ScrollToTop />
     </>
   );
 }

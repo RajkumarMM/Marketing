@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import AboutUs from "./AboutUs";
 import Footer from './components/Footer';
 import ContactUs from "./ContactUs";
+import TermsAndConditions from "./TermsAndConditions";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<AboutUs />} />
       <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
     </Routes>
     <Footer />
   </Router>
