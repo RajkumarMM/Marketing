@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import ContactUs from "./ContactUs";
 import TermsAndConditions from "./TermsAndConditions";
 import Preloader from "./components/Preloader";
+import Service from "./Service";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/services" element={<Service />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         </Routes>
         <Footer />

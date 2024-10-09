@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ScrollToTop from './components/ScrollToTop';
-
+import SocialMedia from './components/SocialMedia';
+import bannerImage from './assets/aboutBanner.png';
+import Scroll from './components/Scroll';
 
 function ContactUs() {
   const [query, setQuery] = useState('');
@@ -17,9 +19,41 @@ function ContactUs() {
 
   return (
     <>
-    <div className="container my-5 text-light">
-      <h1 className="text-center mb-4" style={{ color: "#fa880c" }}>Contact Us</h1>
+    <div className="vh-100 vw-100 bg-black text-white">
+                {/* Background image with opacity */}
+                <div className="position-absolute top-0 start-0 w-100 h-100">
+                    <img
+                        src={bannerImage}
+                        alt="Office Background"
+                        className="w-100 h-100 object-cover opacity-50"
+                        style={{ filter: 'grayscale(150%)' }}
+                    />
+                </div>
 
+                {/* Content container */}
+                <div className="container h-100 d-flex flex-column justify-content-evenly position-relative z-0">
+
+                    {/* Headings in the middle */}
+                    <div className="d-flex align-items-center justify-content-center mt-2">
+                        <div className="text-center">
+                            <h1 className="display-4 fw-bold">
+                            Let’s connect! Your<span style={{ color: "#fa880c" }}> journey to success </span> <br />
+                             begins with a <span style={{ color: "#fa880c" }}>conversation.</span>
+                            </h1>
+                            <p className="fw-semibold">
+                            Have questions or need assistance? <br />Reach out to us today, and let’s get started!
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* SocialMedia content at the bottom */}
+                    <div>
+                        <SocialMedia />
+                    </div>
+                </div>
+            </div>
+    <div className="container my-5 text-light" id='whatwedo'>
+      <h2 className="text-center mb-4 fw-bold" style={{ color: "#fa880c" }}>Contact Us</h2>
       {/* Chat with Us and Call Us Sections in a Row */}
       <div className="row d-flex justify-content-between">
         {/* Chat with Us Column */}
@@ -41,7 +75,7 @@ function ContactUs() {
       </div>
 
       {/* Submit a Query Section */}
-      <div className="my-4 p-4 rounded" style={{ backgroundColor: '#1a1a1a', border: "1px solid #fa880c" }} id='whatwedo'>
+      <div className="my-4 p-4 rounded" style={{ backgroundColor: '#1a1a1a', border: "1px solid #fa880c" }} >
         <h3 style={{ color: "#fa880c" }}>Submit a Query</h3>
         <p className='fs-5 fw-semibold'>If you have any specific questions or concerns, feel free to submit your query below:</p>
         
@@ -106,7 +140,7 @@ function ContactUs() {
         )}
       </div>
     </div>
-    <ScrollToTop />
+    <Scroll />
     </>
   );
 }

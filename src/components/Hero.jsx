@@ -1,4 +1,3 @@
-// Home.jsx or Hero.jsx
 import React from "react";
 import SocialMedia from './SocialMedia';
 import bannerImage from '../assets/Banner.png';
