@@ -60,7 +60,8 @@
 .menu a:hover {
     color: #ff5722;
 }
-.menu a.active {
-    color: #ff5722;
-    font-weight: bold;
+.activeH {
+    color: #ff5722 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
 }
