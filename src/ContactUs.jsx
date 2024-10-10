@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ScrollToTop from './components/ScrollToTop';
 import SocialMedia from './components/SocialMedia';
 import bannerImage from './assets/aboutBanner.png';
 import Scroll from './components/Scroll';
@@ -7,6 +6,7 @@ import axios from 'axios';
 
 function ContactUs() {
   const [query, setQuery] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [subject, setSubject] = useState('');
@@ -14,26 +14,43 @@ function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     // Create an object with the form data
     const formData = {
+      name,
       email,
       phone,
       subject,
       query,
     };
-
+  
     try {
       // Send the form data to the backend using Axios
-      const response = await axios.post('http://localhost:3000/submit-query', formData);
+      const response = await axios.post('http://localhost:5000/submit-query', formData);
       if (response.status === 200) {
         setSubmitted(true); // Show success message
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setPhone('');
+        setSubject('');
+        setQuery('');
       }
     } catch (error) {
       console.error('Error submitting the form:', error);
-      alert('Failed to submit your query. Please try again.');
+      if (error.response) {
+        // Server responded with a status other than 200
+        alert(`Error: ${error.response.data.message || 'Failed to submit your query. Please try again.'}`);
+      } else if (error.request) {
+        // Request was made but no response was received
+        alert('Network error. Please check your connection.');
+      } else {
+        // Something happened in setting up the request
+        alert('Error: ' + error.message);
+      }
     }
   };
+
 
   return (
     <>
@@ -95,6 +112,18 @@ function ContactUs() {
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label className='fs-5 fw-semibold' htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  className="form-control"
+                  style={{ backgroundColor: '#333', color: '#fff', borderColor: '#fa880c' }}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
               <div className="form-group">
                 <label className='fs-5 fw-semibold' htmlFor="email">Email</label>
                 <input
