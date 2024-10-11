@@ -4,7 +4,7 @@ import AppIcon from '../assets/appIcon.png';
 
 function WhatWeDo() {
   return (
-    <div className="text-light my-5">
+    <div className="text-light vh-100 d-flex justify-content-center align-items-center">
       <div className="container" id="whatwedo">
         <h6 className="fw-medium py-3" style={{ color: "#fa880c" }}>
           WHAT WE DO

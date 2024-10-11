@@ -12,8 +12,8 @@ function Header() {
           <img
             src={Kanavulablogo1}
             alt="Company Logo"
-            className="img-fluid"
-            // style={{ height: '50px', width: '50px' }}
+            className='mt-2'
+            style={{ height: 'auto', width: '90%' }}
           />
         </div>
         {/* Hamburger menu on the right */}

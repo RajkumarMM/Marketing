@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 function WeDoDifferent() {
   return (
-    <div className="text-light my-5">
+    <div className="text-light vh-100">
     <div className='container'>
     <div className="row pt-3">
   <div className="col-md-6 position-relative">

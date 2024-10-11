@@ -8,6 +8,7 @@ import ContactUs from "./ContactUs";
 import TermsAndConditions from "./TermsAndConditions";
 import Preloader from "./components/Preloader";
 import Service from "./Service";
+import LoginSignupForm from "./LoginSignupForm";
 
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/services" element={<Service />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/login" element={<LoginSignupForm />} />
+          
         </Routes>
         <Footer />
         </>

@@ -54,6 +54,11 @@ function HamburgerMenu() {
                 Reach Us
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/login" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH': 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+                login
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="d-flex flex-column justify-content-start">

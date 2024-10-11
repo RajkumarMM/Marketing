@@ -5,7 +5,7 @@ import AppIcon from '../assets/appIcon.png';
 
 function SkyRocket() {
   return (
-    <div className="text-light my-5">
+    <div className="text-light my-3 vh-100">
     <div className='container'>
     <div className="row pt-3">
     <div className="col-md-6 p-4 d-flex flex-column justify-content-center">
