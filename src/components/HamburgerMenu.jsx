@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Spin as Hamburger } from 'hamburger-react';
-import { NavLink } from 'react-router-dom'; // Import NavLink
+import { NavLink } from 'react-router-dom';
 import './HamburgerMenu.css';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -15,48 +15,62 @@ function HamburgerMenu() {
     setOpen(false);
   };
 
+  // Effect to add/remove no-scroll class
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('no-scroll'); // Add no-scroll class
+    } else {
+      document.body.classList.remove('no-scroll'); // Remove no-scroll class
+    }
+
+    // Cleanup function to ensure no-scroll is removed on unmount
+    return () => {
+      document.body.classList.remove('no-scroll'); // Ensure it is removed on unmount
+    };
+  }, [isOpen]);
+
   return (
     <div>
       {/* Hamburger icon */}
       <Hamburger toggled={isOpen} toggle={setOpen} size={25} />
 
-      {/* Menu content (always rendered but hidden or shown based on isOpen state) */}
+      {/* Menu content */}
       <div className={`menu ${isOpen ? 'show' : ''} d-flex justify-content-evenly align-items-center gap-4 text-light`}>
         <div>
           <ul>
             <li>
-              <NavLink to="/" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH': 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH': 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/about" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH': 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/services" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
                 Services
               </NavLink>
             </li>
             <li>
-              <NavLink to="/ourPortfolio" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH': 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/ourPortfolio" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
                 Our Portfolio
               </NavLink>
             </li>
             <li>
-              <NavLink to="/careers" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH': 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/careers" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
                 Careers
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact-us" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH': 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/contact-us" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
                 Reach Us
               </NavLink>
             </li>
             <li>
-              <NavLink to="/login" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH': 'fs-4 fw-semibold')} onClick={handleLinkClick}>
-                login
+              <NavLink to="/login" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+                Login
               </NavLink>
             </li>
           </ul>

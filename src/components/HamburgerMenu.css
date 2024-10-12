@@ -25,7 +25,10 @@
     z-index: 10000; /* Ensure the Hamburger icon is always above the menu */
     color: #fff;
 }
+.hamburger-react.show{
+    position: fixed;
 
+}
 .menu.show {
     opacity: 1; /* Fully visible */
     transform: translateX(0) translateY(0) rotate(0deg) scale(1.1); /* Slightly scale up for grand effect */
@@ -93,3 +96,15 @@
     font-weight: bold !important;
     text-decoration: none !important;
 }
+html.show, body.show {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+    height: 100%; /* Ensures the body takes full height */
+}
+
+.no-scroll {
+    overflow: hidden; /* Disable scrolling */
+    height: 100vh; /* Make sure the body takes full viewport height */
+}
+
