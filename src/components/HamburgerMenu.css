@@ -1,27 +1,74 @@
 .menu {
-    background-color: #383838;
+    background-color: rgba(56, 56, 56, 0.95); /* Slightly opaque background for contrast */
     border-radius: 10px;
-    border: 1px solid #ff5722;
     backdrop-filter: blur(5px);
-    position: absolute;
-    top: 20px; /* Adjust based on your layout */
-    right: 70px;
-    width: auto;
-    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
     text-align: center;
     opacity: 0; /* Start hidden */
-    transform: translateY(-10px); /* Start slightly above */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and position */
+    transform: translateX(100vw) translateY(-100vh) rotate(45deg); /* Start off-screen top-right and rotated */
+    transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1) 0.2s, /* Reduced delay for the menu */
+                transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0.2s, 
+                scale 1s cubic-bezier(0.77, 0, 0.175, 1) 0.2s; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Position above other elements */
 }
+
 .hamburger-react {
     position: relative;
     z-index: 10000; /* Ensure the Hamburger icon is always above the menu */
     color: #fff;
-  }
+}
 
 .menu.show {
     opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to original position */
+    transform: translateX(0) translateY(0) rotate(0deg) scale(1.1); /* Slightly scale up for grand effect */
+}
+
+.menu::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+    transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1) 0.4s, /* Reduced delay for the overlay */
+                transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0.4s; 
+    opacity: 1; /* Start fully visible */
+    z-index: -5; /* Behind the before element */
+}
+
+.menu.show::after {
+    opacity: 0.4; /* Slightly visible when the menu is shown */
+    transform: scale(1.05) translate(-10px, -10px); /* Scale up and move slightly */
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+    top: -30px; /* Adjusted position for effect */
+    right: -30px; /* Adjusted position for effect */
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4); /* More visible white background for elegance */
+    transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1) 0.6s, /* Reduced delay for the background */
+                transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0.6s; 
+    opacity: 1; /* Start fully visible */
+    z-index: -4; /* Behind the menu */
+}
+
+.menu.show::before {
+    opacity: 0; /* Fade out when the menu is shown */
+    transform: scale(1.1) translate(-20px, -20px); /* Scale up and move slightly */
 }
 
 .menu ul {
@@ -29,37 +76,18 @@
     padding: 0;
 }
 
-.menu li {
-    margin: 10px 0;
-    opacity: 0; /* Start hidden */
-    transform: translateX(-20px); /* Start slightly to the left */
-    animation: slideIn 0.3s forwards; /* Animation on load */
-}
-
-/* Animate each menu item */
-.menu li:nth-child(1) { animation-delay: 0.1s; }
-.menu li:nth-child(2) { animation-delay: 0.2s; }
-.menu li:nth-child(3) { animation-delay: 0.3s; }
-.menu li:nth-child(4) { animation-delay: 0.4s; }
-.menu li:nth-child(5) { animation-delay: 0.5s; }
-.menu li:nth-child(6) { animation-delay: 0.6s; }
-
-@keyframes slideIn {
-    to {
-        opacity: 1; /* Fully visible */
-        transform: translateX(0); /* Move to original position */
-    }
-}
-
 .menu a {
-    color: #fff;
+    color: #fff; /* Text color */
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px; /* Increased font size for better readability */
+    font-weight: 700; /* Use bold font weight for clarity */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9); /* Stronger text shadow for better visibility */
 }
 
 .menu a:hover {
-    color: #ff5722;
+    color: #ff5722; /* Optional hover effect */
 }
+
 .activeH {
     color: #ff5722 !important;
     font-weight: bold !important;

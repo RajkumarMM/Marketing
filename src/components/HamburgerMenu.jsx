@@ -21,7 +21,7 @@ function HamburgerMenu() {
       <Hamburger toggled={isOpen} toggle={setOpen} size={25} />
 
       {/* Menu content (always rendered but hidden or shown based on isOpen state) */}
-      <div className={`menu ${isOpen ? 'show' : ''} d-flex justify-content-between align-items-center gap-4 text-light`}>
+      <div className={`menu ${isOpen ? 'show' : ''} d-flex justify-content-evenly align-items-center gap-4 text-light`}>
         <div>
           <ul>
             <li>

@@ -16,7 +16,7 @@
     
     -webkit-background-clip: text; /* Clip the background to the text */
     color: transparent; /* Make the text color transparent to show gradient */
-    z-index: 99;
+    z-index: 1;
 }
 .scroll-text-top{
     bottom: 10px;
@@ -26,7 +26,7 @@
     position: fixed;
     bottom: 20px; /* Align to the bottom */
     right: 60px; /* Position from the right */
-    z-index: 99;
+    z-index: 1;
 }
 .scroll-top{
     transform: rotate(180deg);
