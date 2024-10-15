@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { GoogleLogin } from '@react-oauth/google'; // Import GoogleLogin component
+import { jwtDecode } from 'jwt-decode'; // Import JWT decode for token processing
 import './LoginSignupForm.css'; // Import the CSS file for styles
 
 const LoginSignupForm = () => {
@@ -30,23 +32,38 @@ const LoginSignupForm = () => {
     
         try {
             const response = await axios.post(endpoint, payload);
-            // Check for successful signup status
-            if (response.status === 201) {  // Change this to 201 for signup success
-                setMessage('Signup successful!'); // Set the success message
+            if (response.status === 201) {
+                setMessage('Signup successful!');
                 navigate('/'); // Navigate to home page on success
-            } else if (response.status === 200) { // Handle login response
+            } else if (response.status === 200) {
                 setMessage('Login successful!');
                 navigate('/'); // Navigate to home page on success
             }
         } catch (error) {
-            console.error(error); // Log the error for debugging
+            console.error(error);
             setMessage('Error: ' + (error.response?.data?.message || 'Something went wrong.'));
         }
     };
+
+    const handleGoogleLoginSuccess = (credentialResponse) => {
+        const idToken = credentialResponse.credential; // Get the ID token
     
+        axios.post('http://localhost:5000/google-login', { credential: idToken })
+            .then(response => {
+                setMessage('Google Login successful!');
+                navigate('/'); // Navigate to home page on success
+            })
+            .catch(error => {
+                console.error('Google login error:', error);
+                const errorMessage = error.response?.data?.message || 'Google Login failed.';
+                setMessage(errorMessage);
+            });
+    };
     
-    
-    
+
+    const handleGoogleLoginError = () => {
+        setMessage('Google Login failed. Please try again.');
+    };
 
     return (
         <div className="auth-container d-flex justify-content-center align-items-center vh-100">
@@ -76,7 +93,7 @@ const LoginSignupForm = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
-                                    ref={emailRef} // Attach the ref to the email input
+                                    ref={emailRef}
                                     style={{ backgroundColor: '#555', color: '#fff', border: 'none' }}
                                 />
                             </div>
@@ -96,7 +113,14 @@ const LoginSignupForm = () => {
                             </button>
                         </form>
 
-                        {/* Success or error message */}
+                        {/* Google Login Button */}
+                        <div className="my-3">
+                            <GoogleLogin
+                                onSuccess={handleGoogleLoginSuccess}
+                                onError={handleGoogleLoginError}
+                            />
+                        </div>
+
                         {message && <p className="text-danger text-center mt-2">{message}</p>}
 
                         <button 
