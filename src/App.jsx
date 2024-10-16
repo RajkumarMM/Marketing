@@ -27,7 +27,7 @@ function App() {
         <Preloader />
       ) : (
         <>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           {/* Define the route for Home page */}
           <Route path="/" element={<Home />} />
@@ -38,7 +38,7 @@ function App() {
           <Route path="/login" element={<LoginSignupForm />} />
           
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
         </>
       )}
       
