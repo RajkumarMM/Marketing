@@ -32,7 +32,7 @@ function ImageSlider() {
         slideShadows: true,
       }}
       autoplay={{
-        delay: 3000, // Auto-slide every 3 seconds
+        delay: 2000, // Auto-slide every 3 seconds
         disableOnInteraction: false, // Continue autoplay even after user interaction
       }}
       pagination={{
@@ -40,29 +40,29 @@ function ImageSlider() {
       }}
       navigation={true} // Enable navigation buttons
       modules={[EffectCoverflow, Pagination, Navigation, Autoplay]} // Import necessary modules
-      className="mb-5"
-      onSlideChange={(swiper) => {
+      className="mb-5 image-slider"
+      onSlideChangeTransitionEnd={(swiper) => {
         swiper.slides.forEach((slide) => {
-          slide.classList.remove('swiper-slide-centered'); // Remove centered class from all slides
+          slide.classList.remove('image-slide-centered');
         });
         const centeredSlide = swiper.slides[swiper.activeIndex];
-        centeredSlide.classList.add('swiper-slide-centered'); // Add centered class to active slide
+        centeredSlide.classList.add('image-slide-centered');
       }}
     >
       {/* Add your slides here */}
-      <SwiperSlide>
+      <SwiperSlide className='image-slide'>
         <img src={GravityImage3} alt="Gravity Branding Image 1" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className='image-slide'>
         <img src={GravityImage1} alt="Gravity Branding Image 2" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className='image-slide'>
         <img src={GravityImage2} alt="Gravity Branding Image 3" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className='image-slide'>
         <img src={GravityImage5} alt="Gravity Branding Image 4" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className='image-slide'>
         <img src={GravityImage3} alt="Gravity Branding Image 5" />
       </SwiperSlide>
       <div className="slide-text mt-1">

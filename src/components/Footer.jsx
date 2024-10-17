@@ -10,7 +10,7 @@ import './Footer.css';
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="text-light py-2 vh-100 d-flex justify-content-between align-items-center" style={{ backgroundColor: '#fa880c' }}>
+    <footer className="text-light py-2 vh-100 vw-100 d-flex justify-content-between align-items-center" style={{ backgroundColor: '#fa880c' }}>
       <div className="container text-start">
         <div className='text-center'>
         <img src={KanavulabIcon2} alt="Kanavu Lab Icon" />

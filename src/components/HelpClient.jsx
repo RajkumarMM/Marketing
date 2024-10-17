@@ -8,7 +8,7 @@ function HelpClient() {
         <h6 className="fw-medium pt-4" style={{ color: "#fa880c" }}>HOW WE'VE HELPED OUR CLIENTS SUCCEED</h6>
         <h3 className="fs-4 fw-bold mt-1 px-3">See how we've helped businesses like yours thrive. Discover the <br/> positive impact our work can have.</h3>
       </div>
-      <div className="container-fluid mt-4">
+      <div className="mt-4">
         <ImageSlider />
       </div>
     </div>

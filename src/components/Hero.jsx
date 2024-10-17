@@ -5,19 +5,19 @@ import bannerImage from '../assets/Banner.png';
 
 function Hero() {
   return (
-    <div className="vh-100 vw-100 bg-black text-white position-relative overflow-hidden">
+    <div className="vh-100 vw-100 text-white position-relative overflow-hidden">
       {/* Include the Header at the top */}
       <Header />
 
       {/* Background image with opacity */}
-      <div className="position-absolute top-0 start-0 w-100 h-100">
+      {/* <div className="position-absolute top-0 start-0 w-100 h-100">
         <img
           src={bannerImage}
           alt="Office Background"
           className="w-100 h-100 object-fit-cover" // Use object-fit to cover the container
           style={{ objectFit: 'cover' }} // Ensures the image covers the div without distortion
         />
-      </div>
+      </div> */}
 
       {/* Content container */}
       <div className="container h-100 d-flex flex-column justify-content-evenly position-relative z-1">
