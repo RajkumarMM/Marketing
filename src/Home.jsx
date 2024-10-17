@@ -50,6 +50,7 @@ function Home() {
 
   return (
     <div className='container-scroll'>
+      {/* <Scroll /> */}
       <div>
         <Hero />
       </div>

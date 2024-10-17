@@ -14,17 +14,20 @@ function SkyRocket() {
             <h3 className="fs-4 fw-bold mb-3">We've helped companies boost their bottom line, dominate the digital world, and simplify their workflows. Imagine what we could do for you.</h3>
             <div className="d-flex flex-column gap-3 mt-2">
               <div className="d-flex align-items-start">
-                <span className="me-2"><img src={PieIcon} alt="pieIcon" /></span>
                 <div>
-                  <h4 className="fw-semibold">Sick of marketing that's a total flop?</h4>
-                  <p>We get it. That's why we're all about data-driven strategies and custom software that actually works.</p>
+                  <h4 className="fw-semibold">
+                  <span className="me-3"><img src={PieIcon} alt="pieIcon" /></span>
+                    Sick of marketing that's a total flop?</h4>
+                  <p className="pe-5" style={{color: '#929292'}}>We get it. That's why we're all about data-driven strategies and custom software that actually works.</p>
                 </div>
               </div>
               <div className="d-flex align-items-start">
-                <span className="me-2"><img src={AppIcon} alt="appIcon" /></span>
+                
                 <div>
-                  <h4 className="fw-semibold">We're not here to waste your time.</h4>
-                  <p>Let us handle the tech and marketing, so you can focus on what matters most: running your business.</p>
+                  <h4 className="fw-semibold">
+                  <span className="me-3"><img src={AppIcon} alt="appIcon" /></span>
+                    We're not here to waste your time.</h4>
+                  <p className="pe-5" style={{color: '#929292'}}>Let us handle the tech and marketing, so you can focus on what matters most: running your business.</p>
                 </div>
               </div>
             </div>

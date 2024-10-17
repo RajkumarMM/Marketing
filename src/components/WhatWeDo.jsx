@@ -16,12 +16,14 @@ function WhatWeDo() {
         </p>
         <div className="row mb-4">
           <div className="col-md-6 d-flex mb-3">
-            <span className="me-2">
+            
+            <div className="pe-5">
+              <h4 className="fw-semibold">
+              <span className="me-3">
               <img src={PieIcon} alt="pieIcon" />
             </span>
-            <div>
-              <h4 className="fw-semibold">Strategy That Drives Results</h4>
-              <p>
+                Strategy That Drives Results</h4>
+              <p className="pe-5" style={{color: '#929292'}}>
                 See your social media investments pay off. We'll craft
                 strategies that deliver real results and help you achieve your
                 business goals.
@@ -29,14 +31,15 @@ function WhatWeDo() {
             </div>
           </div>
           <div className="col-md-6 d-flex">
-            <span className="me-2">
-              <img src={AppIcon} alt="appIcon" />
-            </span>
+            
             <div>
               <h4 className="font-weight-semibold">
+              <span className="me-3">
+              <img src={AppIcon} alt="appIcon" />
+            </span>
                 Comprehensive Digital Services
               </h4>
-              <p>
+              <p className=" pe-5" style={{color: '#929292'}}>
                 Build tools that seamlessly integrate into your daily workflow
                 that streamline processes and boost efficiency.
               </p>

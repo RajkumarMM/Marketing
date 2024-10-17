@@ -28,7 +28,7 @@ function Hero() {
               Marketing That <span style={{ color: "#fa880c" }}>Moves.</span>
             </h1>
             <h2 className="display-5 fw-bold">
-              Solutions That <span style={{ color: "#fa880c" }}>Grow.</span>
+              Solutions That <span style={{ color: "#fa880c" }}>Grows.</span>
             </h2>
           </div>
         </div>

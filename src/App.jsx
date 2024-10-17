@@ -36,7 +36,6 @@ function App() {
           <Route path="/services" element={<Service />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/login" element={<LoginSignupForm />} />
-          
         </Routes>
         {/* <Footer /> */}
         </>
