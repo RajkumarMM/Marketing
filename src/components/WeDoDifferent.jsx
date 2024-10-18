@@ -5,16 +5,15 @@ import { NavLink } from 'react-router-dom';
 function WeDoDifferent() {
   return (
     <div className="text-light vh-md-100">
-      <div className='container'>
+      <div className="container">
         <div className="row pt-3">
           {/* Image Section */}
           <div className="col-md-6 position-relative mb-4 mb-md-0 d-none d-md-block">
-  <img src={laptopImage} alt="Team collaboration" className="img-fluid w-100 h-100" />
-</div>
-
+            <img src={laptopImage} alt="Team collaboration" className="img-fluid w-100 h-100" />
+          </div>
 
           {/* Text Section */}
-          <div className="col-md-6 p-4 d-flex flex-column justify-content-center">
+          <div className="col-12 col-md-6 p-4 d-flex flex-column justify-content-center text-center text-md-start"> {/* Center text for small screens */}
             <h6 className="fw-medium mb-3" style={{ color: "#fa880c" }}>WHAT WE DO DIFFERENT</h6>
             <h3 className="fs-4 fw-bold mb-3">Tired of promises that don't deliver?</h3>
             <p className="mb-3">
@@ -27,7 +26,7 @@ function WeDoDifferent() {
             </p>
             <p className="mb-3">Ready to <span style={{ color: "#fa880c" }}>take your business to the next level?</span></p>
             <NavLink to="/contact-us">
-              <button className="btn btn-outline-light w-50">Let's talk</button>
+              <button className="btn btn-outline-light w-50 mx-auto mx-md-0">Let's talk</button> {/* Center button on small screens */}
             </NavLink>
           </div>
         </div>

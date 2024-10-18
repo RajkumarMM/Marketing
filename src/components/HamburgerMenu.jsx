@@ -36,7 +36,7 @@ function HamburgerMenu() {
 
       {/* Menu content */}
       <div className={`menu ${isOpen ? 'show' : ''} d-flex justify-content-evenly align-items-center gap-4 text-light`}>
-        <div>
+        <div className='flex-shrink-0'>
           <ul>
             <li>
               <NavLink to="/" className={({ isActive }) => (isActive ? 'fs-3 fw-bold activeH' : 'fs-3 fw-bold')} onClick={handleLinkClick}>
