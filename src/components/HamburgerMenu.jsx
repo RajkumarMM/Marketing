@@ -39,37 +39,37 @@ function HamburgerMenu() {
         <div>
           <ul>
             <li>
-              <NavLink to="/" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/" className={({ isActive }) => (isActive ? 'fs-3 fw-bold activeH' : 'fs-3 fw-bold')} onClick={handleLinkClick}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/about" className={({ isActive }) => (isActive ? 'fs-3 fw-bold activeH' : 'fs-3 fw-bold')} onClick={handleLinkClick}>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/services" className={({ isActive }) => (isActive ? 'fs-3 fw-bold activeH' : 'fs-3 fw-bold')} onClick={handleLinkClick}>
                 Services
               </NavLink>
             </li>
             <li>
-              <NavLink to="/ourPortfolio" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/ourPortfolio" className={({ isActive }) => (isActive ? 'fs-3 fw-bold activeH' : 'fs-3 fw-bold')} onClick={handleLinkClick}>
                 Our Portfolio
               </NavLink>
             </li>
             <li>
-              <NavLink to="/careers" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/careers" className={({ isActive }) => (isActive ? 'fs-3 fw-bold activeH' : 'fs-3 fw-bold')} onClick={handleLinkClick}>
                 Careers
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact-us" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/contact-us" className={({ isActive }) => (isActive ? 'fs-3 fw-bold activeH' : 'fs-3 fw-bold')} onClick={handleLinkClick}>
                 Reach Us
               </NavLink>
             </li>
             <li>
-              <NavLink to="/login" className={({ isActive }) => (isActive ? 'fs-4 fw-semibold activeH' : 'fs-4 fw-semibold')} onClick={handleLinkClick}>
+              <NavLink to="/login" className={({ isActive }) => (isActive ? 'fs-3 fw-bold activeH' : 'fs-3 fw-bold')} onClick={handleLinkClick}>
                 Login
               </NavLink>
             </li>

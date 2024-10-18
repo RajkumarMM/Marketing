@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 /* .swiper-slide img {
@@ -21,3 +22,19 @@ body {
   object-fit: cover;
 }
  */
+ /* Pagination styles */
+
+.page-slider .swiper-pagination-bullet {
+  background-color: #688eb8;
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  transition: all 0.2s  ease-in-out;
+}
+
+.page-slider .swiper-pagination-bullet-active  {
+  background-color: #ff5722;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+}

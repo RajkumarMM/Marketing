@@ -34,9 +34,10 @@ function SkyRocket() {
           </div>
           
           {/* Image Section */}
-          <div className="col-md-6 position-relative mb-4 mb-md-0">
-            <img src={roketImage} alt="Team collaboration" className="img-fluid w-100 h-100" style={{ objectFit: 'cover' }} />
-          </div>
+          <div className="col-md-6 position-relative mb-4 mb-md-0 d-none d-md-block">
+  <img src={roketImage} alt="Team collaboration" className="img-fluid w-100 h-100" style={{ objectFit: 'cover' }} />
+</div>
+
         </div>
       </div>
     </div>

@@ -8,9 +8,10 @@ function WeDoDifferent() {
       <div className='container'>
         <div className="row pt-3">
           {/* Image Section */}
-          <div className="col-md-6 position-relative mb-4 mb-md-0">
-            <img src={laptopImage} alt="Team collaboration" className="img-fluid w-100 h-100" />
-          </div>
+          <div className="col-md-6 position-relative mb-4 mb-md-0 d-none d-md-block">
+  <img src={laptopImage} alt="Team collaboration" className="img-fluid w-100 h-100" />
+</div>
+
 
           {/* Text Section */}
           <div className="col-md-6 p-4 d-flex flex-column justify-content-center">

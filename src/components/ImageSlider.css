@@ -16,12 +16,10 @@
 }
 
 .image-slide-centered {
-  opacity: 1;
   filter: none;
 }
 
 .image-slide:not(.image-slide-centered) {
-  opacity: 0.5;
   filter: blur(5px);
 }
 
@@ -33,56 +31,60 @@
 }
 
 /* Custom navigation buttons */
-.custom-button-prev,
-.custom-button-next {
-  width: 40px;
-  height: 40px;
-  color: #ff5722;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+/* Custom Navigation Buttons */
+.image-slider .swiper-button-next,
+.image-slider .swiper-button-prev {
+  color: rgba(255, 87, 34, 0.8); /* Text color for arrows */
+  width: 40px; /* Button width */
+  height: 40px; /* Button height */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Rounded buttons */
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-  border-radius: 50%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  z-index: 10; /* Ensure buttons are above other elements */
 }
 
-.custom-button-prev {
-  left: 10px;
+/* Positioning the buttons */
+.image-slider .swiper-button-prev {
+  left: 10px; /* Adjust positioning */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.custom-button-next {
-  right: 10px;
+.image-slider .swiper-button-next {
+  right: 10px; /* Adjust positioning */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.custom-button-prev:hover,
-.custom-button-next:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+/* Hover effects */
+.image-slider .swiper-button-next:hover,
+.image-slider .swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Change background on hover */
 }
 
-/* Optional arrow icons */
-.custom-button-prev::after,
-.custom-button-next::after {
-  font-size: 20px;
-  color: #ff5722;
+/* Arrow icons */
+.image-slider .swiper-button-next::after,
+.image-slider .swiper-button-prev::after {
+  font-size: 20px; /* Arrow icon size */
+  color: rgba(255, 87, 34, 0.8); /* Arrow icon color */
 }
+
+
 
 /* Pagination styles */
-.custom-pagination {
-  margin-top: 10px !important;
+
+.image-slider .swiper-pagination-bullet {
+  background-color: #728ca8 !important;
+  width: 10px !important;
+  height: 10px !important;
+  transition: background-color 0.3s !important;
 }
 
-.custom-bullet {
-  background-color: #007bff;
-  width: 10px;
-  height: 10px;
-  transition: background-color 0.3s;
-}
-
-.custom-bullet-active {
-  background-color: #ff5722;
+.image-slider .swiper-pagination-bullet-active  {
+  background-color: #ff5722 !important;
 }
 
 /* Slide text */
@@ -98,18 +100,6 @@
       width: 90%;
       height: auto;
   }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-      width: 30px;
-      height: 30px;
-  }
-
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-      font-size: 16px;
-  }
-
   .slide-text {
       font-size: 1rem;
   }

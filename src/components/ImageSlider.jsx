@@ -20,10 +20,10 @@ function ImageSlider() {
   return (
     <Swiper
       effect={'coverflow'}
-      grabCursor={true}
       centeredSlides={true}
       slidesPerView={'auto'}
       loop={true} // Enable infinite loop
+      loopedSlides={5}
       coverflowEffect={{
         rotate: 50,
         stretch: 0,
@@ -32,7 +32,7 @@ function ImageSlider() {
         slideShadows: true,
       }}
       autoplay={{
-        delay: 2000, // Auto-slide every 3 seconds
+        delay: 2000, // Auto-slide every 2 seconds
         disableOnInteraction: false, // Continue autoplay even after user interaction
       }}
       pagination={{
@@ -40,7 +40,7 @@ function ImageSlider() {
       }}
       navigation={true} // Enable navigation buttons
       modules={[EffectCoverflow, Pagination, Navigation, Autoplay]} // Import necessary modules
-      className="mb-5 image-slider"
+      className="image-slider"
       onSlideChangeTransitionEnd={(swiper) => {
         swiper.slides.forEach((slide) => {
           slide.classList.remove('image-slide-centered');
