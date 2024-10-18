@@ -6,14 +6,17 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 function SocialMedia() {
   return (
-    <div className="d-flex flex-column justify-content-start gap-3">
-      <a href="#" aria-label="LinkedIn" className="text-white me-3 align-content-center"> <LinkedInIcon fontSize="medium" /> </a>
-      <a href="https://www.instagram.com/kanavulabs_official/" 
+    <div className="py-4">
+      <ul className='list-unstyled'>
+        <li className='mb-3'><a href="#" aria-label="LinkedIn" className="text-white"> <LinkedInIcon fontSize="medium" /> </a></li>
+        <li className='mb-3'><a href="https://www.instagram.com/kanavulabs_official/" 
         target="_blank" 
         rel="noopener noreferrer" // This is for security reasons, opening in a new tab
-        aria-label="Instagram" className="text-white me-3 align-content-center"> <InstagramIcon fontSize="medium" /> </a>
-      <a href="#" aria-label="Facebook" className="text-white me-3 align-content-center"> <FacebookIcon fontSize="medium" /></a>
-      <a href="#" aria-label="YouTube" className="text-white align-content-center"><YouTubeIcon fontSize="medium" /></a>
+        aria-label="Instagram" className="text-white"> <InstagramIcon fontSize="medium" /> </a></li>
+        <li className='mb-3'>      <a href="#" aria-label="Facebook" className="text-white"> <FacebookIcon fontSize="medium" /></a>
+        </li>
+        <li><a href="#" aria-label="YouTube" className="text-white"><YouTubeIcon fontSize="medium" /></a></li>
+      </ul>
     </div>
   )
 }
