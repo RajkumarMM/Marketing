@@ -1,38 +1,36 @@
-
 body {
-  background:  #000;
+  background: #000;
 }
 
 .page-slider {
   width: 100%;
-  height: 100%; /* Ensures full height for vertical scrolling */
+  height: 100%; /* Ensure full height for vertical scrolling */
 }
 
 .page-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%; /* Match parent Swiper slide height */
 }
 
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
+/* Optional: Handle specific component height */
+.footer-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align footer to bottom of the slide */
   height: 100%;
-  object-fit: cover;
 }
- */
- /* Pagination styles */
 
 .page-slider .swiper-pagination-bullet {
   background-color: #688eb8;
   width: 10px;
   height: 10px;
   border: 1px solid white;
-  transition: all 0.2s  ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.page-slider .swiper-pagination-bullet-active  {
+.page-slider .swiper-pagination-bullet-active {
   background-color: #ff5722;
   height: 20px;
   border-radius: 10px;
