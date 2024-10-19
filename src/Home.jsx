@@ -17,14 +17,17 @@ import bannerImage from './assets/Banner.png';
 
 export default function App() {
   const [isSliderVisible, setIsSliderVisible] = useState(true);
+  const [showBackground, setShowBackground] = useState(false); // State for background visibility
   const minHeight = 600; // Set your desired minimum height in pixels
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerHeight < minHeight) {
         setIsSliderVisible(false);
+        setShowBackground(true); // Hide background if height is insufficient
       } else {
         setIsSliderVisible(true);
+        setShowBackground(false); // Show background if height is sufficient
       }
     };
 
@@ -40,8 +43,9 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{ height: '100vh' }}> {/* Change from 100dvh to 100vh for consistency */}
+    <>
       {isSliderVisible ? (
+        <div style={{ height: '100vh' }}>
         <Swiper
           direction="vertical"
           slidesPerView={1}
@@ -58,7 +62,7 @@ export default function App() {
             backgroundSize: 'cover', 
             backgroundPosition: 'center',
           }} className='page-slide'>
-            <Hero />
+            <Hero showBackground={showBackground} /> {/* Pass showBackground prop */}
           </SwiperSlide>
           <SwiperSlide className='page-slide'>
             <WhatWeDo />
@@ -76,16 +80,17 @@ export default function App() {
             <Footer />
           </SwiperSlide>
         </Swiper>
+        </div>
       ) : (
         <>
-        <Hero />
-        <WhatWeDo />
-        <WeDoDifferent />
-        <SkyRocket />
-        <HelpClient />
-        <Footer />
+          <Hero showBackground={showBackground} /> {/* Pass showBackground prop */}
+          <WhatWeDo />
+          <WeDoDifferent />
+          <SkyRocket />
+          <HelpClient />
+          <Footer />
         </>
       )}
-    </div>
+    </>
   );
 }

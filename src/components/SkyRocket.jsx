@@ -15,26 +15,30 @@ function SkyRocket() {
             <div className="d-flex flex-column gap-3 mt-2">
               <div className="d-flex align-items-start justify-content-center justify-content-md-start"> {/* Center for small screens */}
                 <div>
-                  <h4 className="fw-semibold">
+                  <div className='d-flex align-items-center gap-3'>
                     <span className="me-3">
                       <img src={PieIcon} alt="pieIcon" />
                     </span>
+                    <span className="fs-4 fw-semibold">
                     Sick of marketing that's a total flop?
-                  </h4>
-                  <p className="pe-md-5 px-5" style={{ color: '#929292' }}>
+                  </span>
+                  </div>
+                  <p className="pe-md-5 mt-2" style={{ color: '#929292' }}>
                     We get it. That's why we're all about data-driven strategies and custom software that actually works.
                   </p>
                 </div>
               </div>
               <div className="d-flex align-items-start justify-content-center justify-content-md-start"> {/* Center for small screens */}
                 <div>
-                  <h4 className="fw-semibold">
+                 <div className="d-flex align-items-center gap-3">
                     <span className="me-3">
                       <img src={AppIcon} alt="appIcon" />
                     </span>
+                    <span className="fs-4 fw-semibold">
                     We're not here to waste your time.
-                  </h4>
-                  <p className="pe-md-5 px-5" style={{ color: '#929292' }}>
+                  </span>
+                  </div>
+                  <p className="pe-md-5 mt-2" style={{ color: '#929292' }}>
                     Let us handle the tech and marketing, so you can focus on what matters most: running your business.
                   </p>
                 </div>

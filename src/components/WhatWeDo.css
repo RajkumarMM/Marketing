@@ -1,0 +1,5 @@
+@media (max-width: 575px){
+    .py-3{
+        padding: 0 0 0 0 !important;
+    }
+}

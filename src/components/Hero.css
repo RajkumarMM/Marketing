@@ -1,0 +1,17 @@
+@media (max-width: 575px) {
+    .hero{
+      margin-bottom: 30px;
+      height: 100vh;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+  .hero{
+    height: 100vh;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px){
+  .hero{
+    height: 100vh;
+  }
+}

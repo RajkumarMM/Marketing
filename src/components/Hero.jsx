@@ -2,26 +2,24 @@ import React from "react";
 import SocialMedia from './SocialMedia';
 import Header from './Header'; // Import the Header component
 import bannerImage from '../assets/Banner.png';
-
-function Hero() {
+import './Hero.css';
+function Hero({ showBackground }) {
   return (
-    <div className="vh-100 vw-100 text-white position-relative overflow-hidden">
-      {/* Include the Header at the top */}
+    <div className="hero w-100 text-white position-relative overflow-hidden">
       <Header />
 
       {/* Background image with opacity */}
-      {/* <div className="position-absolute top-0 start-0 w-100 h-100">
-        <img
-          src={bannerImage}
-          alt="Office Background"
-          className="w-100 h-100 object-fit-cover" // Use object-fit to cover the container
-          style={{ objectFit: 'cover' }} // Ensures the image covers the div without distortion
-        />
-      </div> */}
-
-      {/* Content container */}
+      {showBackground && (
+        <div className="position-absolute top-0 start-0 w-100 h-100">
+          <img
+            src={bannerImage}
+            alt="Office Background"
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }} // Ensure full coverage
+          />
+        </div>
+      )}
+      
       <div className="container h-100 d-flex flex-column justify-content-evenly position-relative z-1">
-        {/* Headings in the middle */}
         <div className="d-flex align-items-center justify-content-center mt-5 pt-3">
           <div className="text-center">
             <h1 className="display-4 fw-bold">
@@ -33,7 +31,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* SocialMedia content at the bottom */}
         <div>
           <SocialMedia />
         </div>
