@@ -5,7 +5,7 @@ import bannerImage from '../assets/Banner.png';
 import './Hero.css';
 function Hero({ showBackground }) {
   return (
-    <div className="hero w-100 text-white position-relative overflow-hidden">
+    <div className="hero w-100 text-white position-relative">
       <Header />
 
       {/* Background image with opacity */}
